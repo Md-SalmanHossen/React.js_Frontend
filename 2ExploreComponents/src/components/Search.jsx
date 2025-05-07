@@ -2,9 +2,11 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div>
-      Search
-    </div>
+    <input 
+      type='text'
+      placeholder='Search books...'
+      className='mb-4 border p-1 w-full rounded-md'
+    />
   )
 }
 

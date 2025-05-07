@@ -7,7 +7,7 @@ import React from 'react'
 
 const Boimela = () => {
   return (
-    <div>
+    <div className='container mx-auto p-4'>
       <Header/>
       <Search/>
       <BookList/>
