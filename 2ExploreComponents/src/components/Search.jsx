@@ -1,13 +1,22 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 
-const Search = () => {
+
+const Search = ({searchTerm,onSearchBook}) => {
   return (
-    <input 
-      type='text'
-      placeholder='Search books...'
-      className='mb-4 border p-1 w-full rounded-md'
-    />
+    <form action="">
+      <input 
+        type='text'
+        value={searchTerm}
+        placeholder='Search books...'
+        onChange={(event)=>onSearchBook(event.target.value)}
+        className='mb-4 border p-1 w-full rounded-md'
+      />
+    </form>
   )
 }
-
+Search.prototype={
+  searchTerm: PropTypes.string.isRequired,
+  onSearchBook:PropTypes.func.isRequired,
+}
 export default Search

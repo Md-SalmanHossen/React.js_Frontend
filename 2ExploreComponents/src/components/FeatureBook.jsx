@@ -3,7 +3,7 @@ import {Star} from "lucide-react"
 const FeatureBook = () => {
   return (
     <div>
-      <Star/>
+      <Star className='cursor-pointer'/>
     </div>
   )
 }
