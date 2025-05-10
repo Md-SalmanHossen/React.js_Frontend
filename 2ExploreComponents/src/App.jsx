@@ -1,5 +1,4 @@
 import Boimela from "./components/Boimela"
-
 function App() {
 
   return (
