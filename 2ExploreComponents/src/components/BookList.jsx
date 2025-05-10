@@ -1,23 +1,24 @@
-import React from 'react'
-import BookRow from './BookRow'
-import PropTypes from 'prop-types'
+import React from 'react';
+import BookRow from './BookRow';
+import PropTypes from 'prop-types';
 
+const BookList = ({ searchTerm, books, onFeatures }) => {
+  const rows = [];
+  books.forEach((book) => {
+    if (book.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1) {
+      return;
+    }
+    rows.push(<BookRow key={book.id} book={book} onFeatures={onFeatures} />);
+  });
+  return (
+    <div className="space-y-4">{rows}</div>
+  );
+};
 
+BookList.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  books: PropTypes.array.isRequired,
+  onFeatures: PropTypes.func.isRequired,
+};
 
-const BookList = ({searchTerm,books}) => {
-   console.log(searchTerm);
-   return (
-      <ul className=''>
-         {books.map((book) => (
-            <li className='mt-2 bg-white shadow rounded-lg' key={book.id}>
-               <BookRow book={book} />
-            </li>
-         ))}
-      </ul>
-   )
-}
-BookList.prototype-{
-   searchTerm: PropTypes.string.isRequired,
-   books:PropTypes.array.isRequired,
-}
-export default BookList
+export default BookList;
