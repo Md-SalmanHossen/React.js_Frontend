@@ -14,15 +14,16 @@ const Countries = () => {
 
 
    return (
-      <div>
+      <div >
          <h3 className="text-center">Countries : {countries.length}</h3>
-         {
-            countries.map(country=>
-            <Country 
+         <div className="grid grid-cols-3">
+            {
+            countries.map(country=><Country 
                key={country.cca3} 
                country={country}>
             </Country>)
-         }
+            }
+         </div>
       </div>
    )
 }
