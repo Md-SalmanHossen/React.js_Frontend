@@ -6,11 +6,14 @@ const Country = ({ country, handleVisitedCountry }) => {
   const { name, flags, population, area, cca3 } = country;
 
   const [visited, setVisited] = useState(false);
+  
   const handleVisited = () => {
     setVisited(!visited);
   }
 
-  console.log(handleVisitedCountry);
+  //console.log(handleVisitedCountry);
+
+  
 
   return (
     <div className={`border-2 border-blue-500 p-5 rounded-xl m-4 ${visited && 'bg-orange-100'}`}>
@@ -19,12 +22,15 @@ const Country = ({ country, handleVisitedCountry }) => {
       <p>Population:{population}</p>
       <p>area :{area}</p>
       <p><small>Code: {cca3}</small></p>
-      <button className='p-1 rounded-sm cursor-pointer bg-blue-400 text-white'>Mark visited</button><br />
+      <button
+        onClick={()=>{handleVisitedCountry(country)}} 
+        className='p-1 rounded-sm cursor-pointer bg-blue-400 text-white'
+      >Mark visited</button><br />
       <button
         onClick={handleVisited}
         className={`p-1 rounded-sm cursor-pointer ${visited ? 'bg-green-200' : 'bg-indigo-200'}`}>{visited ? 'visited' : 'Going'}</button>
 
-      {visited ? 'I have visited this country country' : 'I want to visit this country'}
+      {visited ? 'I have visited' : 'I want to visit'}
     </div>
   )
 }

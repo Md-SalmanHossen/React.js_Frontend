@@ -15,8 +15,8 @@ const Countries = () => {
 
    const handleVisitedCountry=country=>{
       console.log('add this is your visited country');
-      
-      console.log(country)
+      const newVisitedCountries=[...visitedCountries,country];
+      setVisitedCountries(newVisitedCountries);
    }
    return (
       <div >
@@ -24,7 +24,9 @@ const Countries = () => {
          <div>
             <h4>Visited Country</h4>
             <ul>
-
+               {
+                  visitedCountries.map(country=><li key={country.cca3}>{country.name.common}</li>)
+               }
             </ul>
          </div>
          <div className="grid grid-cols-3">
