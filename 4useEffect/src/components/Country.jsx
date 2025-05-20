@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Country = ({ country, handleVisitedCountry }) => {
+const Country = ({ country, handleVisitedCountry,handleVisitedFlags }) => {
   if (!country) return <p>Loading country data......</p>
 
   const { name, flags, population, area, cca3 } = country;
@@ -25,7 +25,11 @@ const Country = ({ country, handleVisitedCountry }) => {
       <button
         onClick={()=>{handleVisitedCountry(country)}} 
         className='p-1 rounded-sm cursor-pointer bg-blue-400 text-white'
-      >Mark visited</button><br />
+      >Mark visited</button>
+      <button
+       className='p-1 rounded-sm cursor-pointer bg-pink-400 text-white'
+       onClick={()=>handleVisitedFlags(country.flags.png)}>add flag</button>
+       <br />
       <button
         onClick={handleVisited}
         className={`p-1 rounded-sm cursor-pointer ${visited ? 'bg-green-200' : 'bg-indigo-200'}`}>{visited ? 'visited' : 'Going'}</button>
