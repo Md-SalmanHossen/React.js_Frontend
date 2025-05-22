@@ -13,6 +13,8 @@ import ContactForm from "./components/ContactForm";
 import PageNotFound from "./components/PageNotFound";
 import JobsLayout from "./Layouts/JobsLayout";
 import Jobs, { jobsLoader } from "./pages/Jobs";
+import JobDetails, { jobDetailsLoader } from "./components/JobDetails";
+import Error from "./components/Error";
 
 function App() {
 
@@ -26,8 +28,9 @@ function App() {
             <Route path="info" element={<ContactInfo/>}/>
             <Route path="form" element={<ContactForm/>}/>
           </Route>
-          <Route path='jobs' element={<JobsLayout/>}>
+          <Route path='jobs' element={<JobsLayout/>} errorElement={<Error/>}>
             <Route index element={<Jobs/>} loader={jobsLoader}/>
+            <Route path=":id" element={<JobDetails/>} loader={jobDetailsLoader}/>
           </Route>
           <Route path="*" element={<PageNotFound/>}/>
       </Route>

@@ -16,7 +16,7 @@ const Navbar = () => {
          <NavLink  to='/about' className={({isActive})=>isActive?'inline-block px-3 text-red-500':'inline-block px-3'}>About</NavLink>
          <NavLink  to='/contact' className={({isActive})=>isActive?'inline-block px-3 text-red-500':'inline-block px-3'}>Contact</NavLink>
          <NavLink  to='/jobs' className={({isActive})=>isActive?'inline-block px-3 text-red-500':'inline-block px-3'}>Job</NavLink>
-      </ul>
+      </ul> 
       <button
         onClick={()=>navigate('/about',{replace:true})}
         className='cursor-pointer  bg-black rounded-xl px-3 py-1 text-white'

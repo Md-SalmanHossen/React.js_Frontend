@@ -4,31 +4,57 @@
       "id": 1,
       "title": "Frontend Developer",
       "salary": "$70,000 - $90,000",
-      "location": "New York, NY"
+      "location": "New York, NY",
+      "description": "Responsible for building interactive, user-friendly web interfaces using HTML, CSS, JavaScript, and React."
     },
     {
       "id": 2,
       "title": "Backend Developer",
       "salary": "$80,000 - $100,000",
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "description": "Develops server-side logic, APIs, and databases to power dynamic web applications, often using Node.js or Python."
     },
     {
       "id": 3,
       "title": "Full Stack Engineer",
       "salary": "$90,000 - $120,000",
-      "location": "Remote"
+      "location": "Remote",
+      "description": "Combines frontend and backend skills to create end-to-end solutions, maintaining both client-side and server-side code."
     },
     {
       "id": 4,
       "title": "UI/UX Designer",
       "salary": "$65,000 - $85,000",
-      "location": "Austin, TX"
+      "location": "Austin, TX",
+      "description": "Designs visually appealing and user-centered interfaces, ensuring seamless user experiences and intuitive navigation."
     },
     {
       "id": 5,
       "title": "DevOps Engineer",
       "salary": "$95,000 - $130,000",
-      "location": "Seattle, WA"
+      "location": "Seattle, WA",
+      "description": "Automates software delivery and infrastructure management, ensuring reliable deployment pipelines and scalable systems."
+    },
+    {
+      "id": 6,
+      "title": "Data Scientist",
+      "salary": "$100,000 - $140,000",
+      "location": "Boston, MA",
+      "description": "Analyzes large datasets to extract insights, build predictive models, and support data-driven decision-making."
+    },
+    {
+      "id": 7,
+      "title": "Mobile App Developer",
+      "salary": "$85,000 - $110,000",
+      "location": "Chicago, IL",
+      "description": "Develops and maintains mobile applications for Android and iOS platforms using technologies like Flutter or React Native."
+    },
+    {
+      "id": 8,
+      "title": "Cloud Solutions Architect",
+      "salary": "$120,000 - $160,000",
+      "location": "Remote",
+      "description": "Designs scalable cloud infrastructure solutions using platforms like AWS, Azure, or Google Cloud."
     }
   ]
 }
